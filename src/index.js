@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export const STATE = {
   LOADING: 'loading',
@@ -10,16 +11,16 @@ export const STATE = {
 
 const ProgressButton = React.createClass({
   propTypes: {
-    classNamespace: React.PropTypes.string,
-    durationError: React.PropTypes.number,
-    durationSuccess: React.PropTypes.number,
-    form: React.PropTypes.string,
-    onClick: React.PropTypes.func,
-    onError: React.PropTypes.func,
-    onSuccess: React.PropTypes.func,
-    state: React.PropTypes.oneOf(Object.keys(STATE).map(k => STATE[k])),
-    type: React.PropTypes.string,
-    shouldAllowClickOnLoading: React.PropTypes.bool
+    classNamespace: PropTypes.string,
+    durationError: PropTypes.number,
+    durationSuccess: PropTypes.number,
+    form: PropTypes.string,
+    onClick: PropTypes.func,
+    onError: PropTypes.func,
+    onSuccess: PropTypes.func,
+    state: PropTypes.oneOf(Object.keys(STATE).map(k => STATE[k])),
+    type: PropTypes.string,
+    shouldAllowClickOnLoading: PropTypes.bool
   },
 
   getDefaultProps () {
